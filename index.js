@@ -24,26 +24,52 @@ app.get('/', function(req, res) {
 		total: pizza.getTotal(),
 		small: pizza.getSmall(),
 		medium: pizza.getMedium(),
-		large: pizza.getLarge()
+		large: pizza.getLarge(),
+		qtySmall : pizza.amountOfSmall(),
+		qtyMed: pizza.amountOfMedium(),
+		qtyLarge: pizza.amountOfLarge()
 	});
+	console.log(pizza.amountOfSmall());
 });
 
 app.get('/order',function(req, res){
-	res.render('order');
+
+	res.render('order',{
+		orders : pizza.getOrderId(),
+	});
+
+	// res.render('index',	{total: pizza.clearCart().total,
+	// 	small: pizza.clearCart().small,
+	// 	medium: pizza.clearCart().med,
+	// 	large: pizza.clearCart().large,
+	// 	qtySmall : pizza.clearCart().howManySmall,
+	// 	qtyMed: pizza.clearCart().howManyMed,
+	// 	qtyLarge: pizza.clearCart().howManyLarge,
+	// });
+	
+console.log('orders   :'+ JSON.stringify(pizza.getOrderId()));
 
 });
+
+// app.post('/reset', function(req, res){
+// pizza.getOrderId();
+// console.log('orders   :'+ JSON.stringify(pizza.getOrderId()));
+
+// 	pizza.clearScreen();
+// 	console.log('clear   :'+ pizza.clearScreen());
+
+// 	// res.redirect('/order');
+// });
 
 app.post('/pizzaTypes', function(req, res){
 	console.log('pizzatype:  ' + req.body.pizzaSize);
 	
 	pizza.add(req.body.pizzaSize);
 	pizza.getPizzaVal(req.body.pizzaSize);
+	pizza.order()
 
 	res.redirect('/');
 });
-
-
-
 
 // start  the server and start listening for HTTP request on the PORT number specified...
 app.listen(PORT, function() {
