@@ -1,0 +1,112 @@
+<section>
+    <div>
+        <h1 class="heading">perfect pizza</h1>
+    </div>
+</section>
+
+<div class="cart container">
+    <h4>shopping cart</h4>
+
+    <table class="cartTotals">
+        <tr>
+            <td>
+            <td>small</td>
+            </td>
+            <td> x<span class="howMany"></span> </td>
+            <td>R<span class="smallPizza"></span>{{small}} </td>
+        </tr>
+        <tr>
+            <td>
+            <td>medium</td>
+            </td>
+            <td> x<span class="howMany"></span> </td>
+            <td>R<span class="medPizza"></span>{{medium}} </td>
+        </tr>
+        <tr>
+            <td>
+            <td>large</td>
+            </td>
+            <td> x<span class="howMany"></span> </td>
+            <td>R<span class="largePizza"></span>{{large}} </td>
+        </tr>
+
+        <tr>
+            <td>
+            <td>total cost</td>
+            </td>
+            <td> <span class="howMany"></span> </td>
+            <td>R<span class="totalPizza">{{total}}</span> </td>
+        </tr>
+
+        <tr>        
+
+        </tr>
+    </table>
+    <a class="button" href="/order"><button type="button">Checkout</button></a>
+</div>
+
+<form action="/pizzaTypes" method="post">
+    <div class="flex-container">
+        <div class="small">
+            <div class="info">
+                <img src="pizza.png" class="imgPizza" alt="">
+                <h2>Small Pizza</h2>
+                <strong>R31.99</strong>
+
+                <div>
+                    small margherita pizza with 3 toppings max.
+                    2 or less meat topping.
+                    3 or less other toppings.
+                </div>
+            </div>
+
+            <div class="orderBox">
+                <button class="btn ordersmallPizza" type="submit" style="margin-left: auto" name="pizzaSize"  value="small" >Order</button>
+            </div>
+
+        </div>
+
+
+
+        <div class="medium">
+            <div class="info">
+                <img src="pizza.png" class="imgPizza" alt="">
+                <h2>Medium Pizza</h2>
+                <strong>R58.99</strong>
+
+                <div>
+                    medium margherita pizza with 3 toppings max.
+                    2 or less meat topping.
+                    3 or less other toppings.
+                </div>
+            </div>
+
+            <div class="orderBox">
+                <button class="btn orderMediumPizza" type="submit" name="pizzaSize" value="medium" style="margin-left: auto">Order</button>
+            </div>
+
+        </div>
+
+
+        <div class="large">
+            <div class="info">
+                <img src="pizza.png" alt="" class="imgPizza">
+                <h2>Large Pizza</h2>
+                <strong>R87.99</strong>
+
+                <div>
+                    large margherita pizza with 3 toppings max.
+                    2 or less meat topping.
+                    3 or less other toppings.
+                </div>
+            </div>
+
+            <div class="orderBox">
+                <button class="btn orderMediumPizza" type="submit" name="pizzaSize" value="large" style="margin-left: auto">Order</button>
+            </div>
+
+        </div>
+
+
+    </div>
+</form>

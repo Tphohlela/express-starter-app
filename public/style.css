@@ -1,0 +1,108 @@
+@media screen and (max-width: 480px) {
+body {
+	background-color: greenyellow;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* .cart{
+	margin-left: auto; 
+	margin-right: auto;
+} */
+.cartTotals{
+	width:80%;
+	text-align: center;
+	
+}
+
+.container {
+	margin: auto;
+	background-color: honeydew;
+	width: 80%;
+	padding: 1em;
+	margin-left: auto; 
+	margin-right: auto;
+	text-align:center;
+}
+.heading{
+	text-align: center;
+}
+
+.imgPizza{
+	height: 50px;
+	width: 50px;
+}
+
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 30px;
+	text-align: center;
+  }
+
+.small{
+	width:100%;
+	flex: 100%;
+}
+
+.medium{
+	width:100%;
+	flex: 100%;
+}
+
+.large{
+	width:100%;
+	flex: 100%;
+}
+}
+  @media screen and (min-width: 480px) {
+
+	body {
+		background-color: greenyellow;
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	}
+
+	/* .cart{
+		margin-left: auto; 
+		margin-right: auto;
+	} */
+
+	.cartTotals{
+		width:80%;
+		text-align: center;
+		
+	}
+	.imgPizza{
+		height: 200px;
+		width: 200px;
+	}
+
+	.container {
+		margin: auto;
+		background-color: honeydew;
+		width: 80%;
+		padding: 1em;
+		text-align: center;
+		margin-left: auto; 
+		margin-right: auto;
+	}
+	.heading{
+		text-align: center;
+	}
+	.flex-container {
+		display: flex;
+		flex-wrap: wrap;
+		font-size: 30px;
+		text-align: center;
+	  }
+
+	.small{
+		flex: 30%;
+	}
+
+	.medium{
+		flex: 30%;
+	}
+
+	.large{
+		flex: 30%;
+	}
+  }
