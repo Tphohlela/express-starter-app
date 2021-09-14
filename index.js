@@ -82,4 +82,3 @@ app.post('/pizzaTypes', function(req, res){
 app.listen(PORT, function() {
 	console.log(`App started on port 3017`)
 });
-

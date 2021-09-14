@@ -35,18 +35,21 @@ module.exports = function pizza() {
 
             total += 31.99;
             howManySmall += 1;
+            small += 31.99;
 
         }
         else if (pizzaType === 'medium') {
 
             total += 58.99;
             howManyMed += 1;
+            med += 58.99;
         }
 
         else if (pizzaType === 'large') {
 
             total += 87.99;
             howManyLarge += 1;
+            large += 87.99;
         }
     }
 
@@ -108,6 +111,12 @@ module.exports = function pizza() {
         return orderStore;
     }
 
+    // function statuses(){
+    //     if (getOrderId().status == "Payment due"){
+    //         return 'pay';
+    //     }
+    // }
+
     return {
         add,
         getTotal,
@@ -121,6 +130,7 @@ module.exports = function pizza() {
         getOrderId,
         // clearCart,
         clearScreen,
-        getClearScreen
+        getClearScreen,
+        // statuses
     }
 }
