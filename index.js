@@ -3,7 +3,6 @@ const exphbs  = require('express-handlebars');
 const pizzaFunction= require('./pizza');
 const pizza = pizzaFunction();
 
-
 const app = express();
 const PORT =  process.env.PORT || 3017;
 
@@ -29,7 +28,6 @@ app.get('/', function(req, res) {
 		qtyMed: pizza.amountOfMedium(),
 		qtyLarge: pizza.amountOfLarge()
 	});
-	console.log(pizza.amountOfSmall());
 });
 
 app.get('/order',function(req, res){
@@ -46,9 +44,18 @@ app.get('/order',function(req, res){
 	// 	qtyMed: pizza.clearCart().howManyMed,
 	// 	qtyLarge: pizza.clearCart().howManyLarge,
 	// });
+	pizza.getOrderId();
+	pizza.clearScreen();
+	pizza.getClearScreen();
+
+	// const clear = pizza.getClearScreen();
+
+	// clear.forEach(function (element) {
+	// 	clear[0].amount = 0; 
+    // });
 	
 console.log('orders   :'+ JSON.stringify(pizza.getOrderId()));
-
+console.log('value of amount   :'+ JSON.stringify(pizza.getClearScreen()));
 });
 
 // app.post('/reset', function(req, res){
@@ -65,7 +72,6 @@ app.post('/pizzaTypes', function(req, res){
 	console.log('pizzatype:  ' + req.body.pizzaSize);
 	
 	pizza.add(req.body.pizzaSize);
-	pizza.getPizzaVal(req.body.pizzaSize);
 	pizza.order()
 
 	res.redirect('/');

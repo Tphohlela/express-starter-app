@@ -1,34 +1,19 @@
 module.exports = function pizza() {
-var total = 0;
-var small = 0;
-var med = 0;
-var large = 0;
-var howManyLarge =0;
-var howManyMed =0;
-var howManySmall = 0;
-var orders = 0;
-const orderStore = [];
-var cartClear;
-var orderId;
-var status;
-var amount;
+    var total = 0;
+    var small = 0;
+    var med = 0;
+    var large = 0;
+    var howManyLarge = 0;
+    var howManyMed = 0;
+    var howManySmall = 0;
+    var orders = 0;
+    const orderStore = [];
+    // var cartClear;
+    // var orderId;
+    // var status;
+    // var amount;
 
-    function getPizzaVal(pizzaType){
-        if (pizzaType === 'small') {
 
-            small += 31.99;
-
-        }
-        else if (pizzaType === 'medium') {
-
-         med += 58.99;
-        }
-
-        else if (pizzaType === 'large') {
-
-         large += 87.99;
-        }
-    }
     // function clearCart(){
     //    var cartClear ={
     //     total:0,
@@ -38,7 +23,7 @@ var amount;
     //     large:0,
     //     small:0,
     //     med:0,
-        
+
     //     }
 
     //     return cartClear;
@@ -65,53 +50,66 @@ var amount;
         }
     }
 
-    function getTotal(){
+    function getTotal() {
         return total.toFixed(2);
     }
 
-    function getLarge(){
+    function getLarge() {
         return large.toFixed(2);;
     }
 
-    function getSmall(){
+    function getSmall() {
         return small.toFixed(2);;
     }
-    function getMedium(){
+    function getMedium() {
         return med.toFixed(2);;
     }
 
-    function amountOfLarge(){
+    function amountOfLarge() {
         return howManyLarge;
     }
 
-    function amountOfSmall(){
+    function amountOfSmall() {
         return howManySmall;
     }
-    function amountOfMedium(){
+    function amountOfMedium() {
         return howManyMed;
     }
 
-    function order(){
-        if(total>0){
-        orderStore.push({
-            orderId : orders += 1,
-            status : "Payment due",
-            amount : total.toFixed(2)
-        });
-    }
+    function order() {
+        if (total > 0) {
+            orderStore.push({
+                orderId: orders += 1,
+                status: "Payment due",
+                amount: total.toFixed(2)
+            });
+        }
     }
 
-    function getOrderId(){
+    function getOrderId() {
         return orderStore;
     }
 
-    function clearScreen(){
-        orderStore.map(x => x.amount)
+    function clearScreen() {
+        console.log("value of amount: " + orderStore[0].amount);
+        // orderStore[0].amount = 0;
+        // orderStore.length = 0;
+        // orderStore.map(x => orderStore[0].amount = 0);
+        
+
+        orderStore.forEach(function (element) {
+             orderStore.amount = 0;
+            // orderStore.amount = 0;
+        });
+    }
+
+    function getClearScreen() {
+        console.log("array :  " + JSON.stringify(orderStore));
+        return orderStore;
     }
 
     return {
         add,
-        getPizzaVal,
         getTotal,
         getMedium,
         getLarge,
@@ -121,7 +119,8 @@ var amount;
         amountOfMedium,
         amountOfSmall,
         getOrderId,
-       // clearCart,
-        clearScreen
+        // clearCart,
+        clearScreen,
+        getClearScreen
     }
 }

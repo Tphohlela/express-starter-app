@@ -38,75 +38,81 @@
             <td>R<span class="totalPizza">{{total}}</span> </td>
         </tr>
 
-        <tr>        
+        <tr>
 
         </tr>
     </table>
-    <a class="button" href="/order"><button type="button">Checkout</button></a>
+    <div style="padding-top: 30px;">
+        <a class="checkbtn btn" href="/order">Checkout</a>
+    </div>
 </div>
 
 <form action="/pizzaTypes" method="post">
-    <div class="flex-container">
-        <div class="small">
-            <div class="info">
-                <img src="pizza.png" class="imgPizza" alt="">
-                <h2>Small Pizza</h2>
-                <strong>R31.99</strong>
+    <div class="categories">
 
-                <div>
-                    small margherita pizza with 3 toppings max.
-                    2 or less meat topping.
-                    3 or less other toppings.
+        <div class="flex-container" style="padding-top: 30px;">
+            <div class="small">
+                <div class="info">
+                    <img src="pizza.png" class="imgPizzaS" style="margin-bottom:20px" alt="">
+                    <h2>Small Pizza</h2>
+                    <strong>R31.99</strong>
+
+                    <div style="padding-right: 40px;">
+                        <ul> small margherita pizza with 3 toppings max.</ul>
+                        <ul>2 or less meat topping.</ul>
+                        <ul> 3 or less other toppings.</ul>
+                    </div>
+
+                </div>
+
+                <div class="orderBox" style="padding-top: 30px;">
+                    <button class="btn ordersmallPizza" type="submit" style="margin-left: auto" name="pizzaSize"
+                        value="small">Order</button>
+                </div>
+                <h1>
+
+                </h1>
+            </div>
+
+            <div class="medium" >
+                <div class="info">
+                    <img src="pizza.png" class="imgPizzaM" style="margin-top:20px;" alt="">
+                    <h2>Medium Pizza</h2>
+                    <strong>R58.99</strong>
+
+                    <div style="padding-right:30px">
+                        <ul>medium margherita pizza with 3 toppings max.</ul>
+                       <ul> 2 or less meat topping.</ul>
+                       <ul> 3 or less other toppings.</ul>
+                    </div>
+                </div>
+
+                <div class="orderBox" style="padding-top: 30px;">
+                    <button class="btn orderMediumPizza" type="submit" name="pizzaSize" value="medium"
+                        style="margin-left: auto">Order</button>
                 </div>
             </div>
 
-            <div class="orderBox">
-                <button class="btn ordersmallPizza" type="submit" style="margin-left: auto" name="pizzaSize"  value="small" >Order</button>
-            </div>
 
-        </div>
+            <div class="large">
+                <div class="info">
+                    <img src="pizza.png" alt="" class="imgPizzaL" style="margin-top:20px;">
+                    <h2 style="margin-top:5px">Large Pizza</h2>
+                    <strong>R87.99</strong>
 
+                    <div style="padding-right:30px">
+                        <ul>large margherita pizza with 3 toppings max.</ul>
+                       <ul> 2 or less meat topping.</ul>
+                       <ul> 3 or less other toppings.</ul>
+                    </div>
+                </div>
 
-
-        <div class="medium">
-            <div class="info">
-                <img src="pizza.png" class="imgPizza" alt="">
-                <h2>Medium Pizza</h2>
-                <strong>R58.99</strong>
-
-                <div>
-                    medium margherita pizza with 3 toppings max.
-                    2 or less meat topping.
-                    3 or less other toppings.
+                <div class="orderBox" style="padding-top: 40px;">
+                    <button class="btn orderMediumPizza" type="submit" name="pizzaSize" value="large"
+                        style="margin-left: auto">Order</button>
                 </div>
             </div>
-
-            <div class="orderBox">
-                <button class="btn orderMediumPizza" type="submit" name="pizzaSize" value="medium" style="margin-left: auto">Order</button>
-            </div>
-
         </div>
-
-
-        <div class="large">
-            <div class="info">
-                <img src="pizza.png" alt="" class="imgPizza">
-                <h2>Large Pizza</h2>
-                <strong>R87.99</strong>
-
-                <div>
-                    large margherita pizza with 3 toppings max.
-                    2 or less meat topping.
-                    3 or less other toppings.
-                </div>
-            </div>
-
-            <div class="orderBox">
-                <button class="btn orderMediumPizza" type="submit" name="pizzaSize" value="large" style="margin-left: auto">Order</button>
-            </div>
-
-        </div>
-
-
     </div>
+
 </form>
