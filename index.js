@@ -34,6 +34,7 @@ app.get('/order',function(req, res){
 
 	res.render('order',{
 		orders : pizza.getOrderId(),
+		status: pizza.getOrderId().status
 	});
 
 	// res.render('index',	{total: pizza.clearCart().total,

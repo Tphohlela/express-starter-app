@@ -97,10 +97,10 @@ module.exports = function pizza() {
         // orderStore.map(x => orderStore[0].amount = 0);
         
 
-        orderStore.forEach(function (element) {
-             orderStore.amount = 0;
-            // orderStore.amount = 0;
-        });
+        // orderStore.forEach(function (element) {
+        //      orderStore.amount = 0;
+        //     // orderStore.amount = 0;
+        // });
     }
 
     function getClearScreen() {

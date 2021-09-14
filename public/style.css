@@ -82,17 +82,29 @@ body {
 .small{
 	width:100%;
 	flex: 100%;
+	background-color: yellow;
 	
 }
 
 .medium{
 	width:100%;
 	flex: 100%;
+	background-color: tomato;
+	padding-bottom: 30px;
 }
 
 .large{
 	width:100%;
 	flex: 100%;
+	background-color: plum;
+	padding-bottom: 30px;
+
+}
+
+
+.statusBtn{
+	font-size: 12px;
+	padding: 10px 20px;
 }
 }
   @media screen and (min-width: 480px) {
